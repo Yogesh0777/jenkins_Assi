@@ -34,7 +34,7 @@ pipeline{
             {
                 steps{
                     sshagent(['yogesh']) {
-                    sh "scp -o StrictHostKeyChecking=no  /var/lib/jenkins/workspace/Sciprt_Prod/target/*.jar ubuntu@13.233.152.191:/home/ubuntu/"            
+                    sh "scp -o StrictHostKeyChecking=no  /home/knoldus/var/lib/jenkins/workspace/capstone_prod/target/*.jar ubuntu@13.233.152.191:/home/ubuntu/"            
                  }
                 }
             }
