@@ -30,16 +30,7 @@ pipeline{
                     sh "mvn package"
                 }
             }
-            stage("Deploy")
-            {
-                steps{
-                    sshagent(['yogesh']) {
-                    sh "scp -o StrictHostKeyChecking=no  /home/knoldus/var/lib/jenkins/workspace/capstone_prod/target/*.jar ubuntu@172.31.14.196:/home/ubuntu/"            
-                 }
-                }
-            }
-            
-            
         
     }
 }
+           
